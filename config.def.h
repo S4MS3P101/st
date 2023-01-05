@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "JetBrainsMono Nerd Font:pixelsize=14:antialias=true:autohint=true";
-static int borderpx = 4;
+static int borderpx = 5;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -107,8 +107,8 @@ static const char *colorname[] = {
 	[5] = "#b16286", /* magenta */
 	[6] = "#689d6a", /* cyan    */
 	[7] = "#a89984", /* white   */
-	[8]  = "#928374", /* black   */
-	[9]  = "#fb4934", /* red     */
+	[8] = "#928374", /* black   */
+	[9] = "#fb4934", /* red     */
 	[10] = "#b8bb26", /* green   */
 	[11] = "#fabd2f", /* yellow  */
 	[12] = "#83a598", /* blue    */
@@ -186,16 +186,16 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ ControlMask,          XK_plus,        zoom,           {.f = +1} },
+	{ TERMMOD,              XK_plus,        zoom,           {.f = +1} },
 	{ ControlMask,          XK_minus,       zoom,           {.f = -1} },
-	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
+	{ TERMMOD,              XK_equal,        zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
-	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
+	{ MODKEY,               XK_k,           kscrollup,      {.i = -1} },
+	{ MODKEY,               XK_j,           kscrolldown,    {.i = -1} },
 };
 
 /*
