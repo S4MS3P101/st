@@ -99,7 +99,7 @@ float alpha = 0.8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	[0] = "#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
+	[0] = "#1d2021", /* hard contrast: #1d2021 / soft contrast: #32302f */
 	[1] = "#cc241d", /* red     */
 	[2] = "#98971a", /* green   */
 	[3] = "#d79921", /* yellow  */
@@ -190,7 +190,7 @@ static Shortcut shortcuts[] = {
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
 	{ TERMMOD,              XK_plus,        zoom,           {.f = +1} },
 	{ ControlMask,          XK_minus,       zoom,           {.f = -1} },
-	{ TERMMOD,              XK_equal,        zoomreset,      {.f =  0} },
+	{ TERMMOD,              XK_equal,       zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
